@@ -1,0 +1,380 @@
+@prefix : <http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/> .
+
+<http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6#Conv2D
+:Conv2D rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :Layers .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6#Dense
+:Dense rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :Layers .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6#Flatten
+:Flatten rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :Layers .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6#Layers
+:Layers rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :deep_neural_network .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6#Maxpooing2D
+:Maxpooing2D rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :Layers .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6#deep_neural_network
+:deep_neural_network rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :model .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/Activation
+:Activation rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :deep_neural_network .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/Adam
+:Adam rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf :Optimizer .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/BinaryCrossentropy
+:BinaryCrossentropy rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :Loss_Function .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/Loss_Function
+:Loss_Function rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :deep_neural_network .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/Optimizer
+:Optimizer rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :deep_neural_network .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/Python
+:Python rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :programming .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/ReLU
+:ReLU rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf :Activation .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/Sigmoid
+:Sigmoid rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :Activation .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/accuracy
+:accuracy rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :result .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/epoch
+:epoch rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :deep_neural_network ;
+       rdfs:comment "There are 20 epochs used in the code" .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/loss
+:loss rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf :result .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/model
+:model rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/programming
+:programming rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/result
+:result rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/validation_accuracy
+:validation_accuracy rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :result .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/validation_loss
+:validation_loss rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :result .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6#belonging_to
+:belonging_to rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6#cats
+:cats rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf :belonging_to .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6#dogs
+:dogs rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf :belonging_to .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6#one
+:one rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf :dogs .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6#saving_model
+:saving_model rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6#zero
+:zero rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf :cats .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6#.h5
+<http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6#.h5> rdf:type owl:DatatypeProperty ;
+                                                                             rdfs:subPropertyOf :saving_model .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/bmp
+:bmp rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf :image_formats .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/image_formats
+:image_formats rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/jpeg
+:jpeg rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf :image_formats .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/jpg
+:jpg rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf :image_formats .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/jupyter_notebook
+:jupyter_notebook rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :python .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/png
+:png rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf :image_formats .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/python
+:python rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/vs_code
+:vs_code rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :python .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/webp
+:webp rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf :image_formats .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/.ipynb
+<http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/.ipynb> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:subPropertyOf :jupyter_notebook .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/.py
+<http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/.py> rdf:type owl:DatatypeProperty ;
+                                                                             rdfs:subPropertyOf :vs_code .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6#DNN
+:DNN rdf:type owl:Class ;
+     rdfs:subClassOf :model .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/Dataset
+:Dataset rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/Image
+:Image rdf:type owl:Class ;
+       rdfs:subClassOf :Dataset .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/cat
+:cat rdf:type owl:Class ;
+     rdfs:subClassOf :train_img ;
+     rdfs:comment "onlly image oof cats" .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/cat_class
+:cat_class rdf:type owl:Class ;
+           rdfs:subClassOf :prediction .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/dog
+:dog rdf:type owl:Class ;
+     rdfs:subClassOf :train_img ;
+     rdfs:comment "only image of cats" .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/dog_and_cat
+:dog_and_cat rdf:type owl:Class ;
+             rdfs:subClassOf :test_img ;
+             rdfs:comment "Both dogs and cats images" .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/dog_class
+:dog_class rdf:type owl:Class ;
+           rdfs:subClassOf :prediction .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/environment
+:environment rdf:type owl:Class ;
+             rdfs:subClassOf :programming .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/jupyter_notebook
+:jupyter_notebook rdf:type owl:Class ;
+                  rdfs:subClassOf :environment .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/keras
+:keras rdf:type owl:Class ;
+       rdfs:subClassOf :libraries .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/language
+:language rdf:type owl:Class ;
+          rdfs:subClassOf :programming .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/libraries
+:libraries rdf:type owl:Class ;
+           rdfs:subClassOf :python .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/matplotlib
+:matplotlib rdf:type owl:Class ;
+            rdfs:subClassOf :libraries .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/model
+:model rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/numpy
+:numpy rdf:type owl:Class ;
+       rdfs:subClassOf :libraries .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/opencv
+:opencv rdf:type owl:Class ;
+        rdfs:subClassOf :libraries .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/pandas
+:pandas rdf:type owl:Class ;
+        rdfs:subClassOf :libraries .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/prediction
+:prediction rdf:type owl:Class ;
+            rdfs:subClassOf :result .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/programming
+:programming rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/python
+:python rdf:type owl:Class ;
+        rdfs:subClassOf :language .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/result
+:result rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/seaboorn
+:seaboorn rdf:type owl:Class ;
+          rdfs:subClassOf :libraries .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/seaborn
+:seaborn rdf:type owl:Class ;
+         rdfs:subClassOf :libraries .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/sklearn
+:sklearn rdf:type owl:Class ;
+         rdfs:subClassOf :libraries .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/tensorflow
+:tensorflow rdf:type owl:Class ;
+            rdfs:subClassOf :libraries .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/test_img
+:test_img rdf:type owl:Class ;
+          rdfs:subClassOf :Image ;
+          rdfs:comment "The rest 20% of the dataset" .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/train_img
+:train_img rdf:type owl:Class ;
+           rdfs:subClassOf :Image ;
+           rdfs:comment "80% of dataset" .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/vs_code
+:vs_code rdf:type owl:Class ;
+         rdfs:subClassOf :environment .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/Cat
+:Cat rdf:type owl:NamedIndividual ,
+              :Image ;
+     :jpg "" .
+
+
+###  http://www.semanticweb.org/sina/ontologies/2023/11/untitled-ontology-6/Dog
+:Dog rdf:type owl:NamedIndividual ,
+              :Image ;
+     :jpg "" .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
